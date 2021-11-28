@@ -6,10 +6,10 @@ exports.up = knex =>  knex.schema.createTable('projects', table => {
     // relationship
 
     table.integer('user_id')
-        .references('user.id')
+        .references('users.id')
         .notNullable()
         .onDelete('CASCADE')
-        
+
     table.timestamps(true, true)
 })
 

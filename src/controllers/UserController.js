@@ -1,6 +1,3 @@
-const { update } = require('lodash')
-const { nextTick } = require('process')
-const { create } = require('yallist')
 const knex = require('../database')
 
 module.exports = {

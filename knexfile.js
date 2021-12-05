@@ -17,6 +17,10 @@ module.exports = {
       directory: `${__dirname}/src/database/seeds`
     }
   },
+    production: { 
+      client: 'pg', 
+      connection: process.env.DATABASE_URL 
+    },
   onUpdateTrigger: table => `
   CREATE TRIGGER ${table}_updated_at
   BEFORE UPDATE ON ${table}

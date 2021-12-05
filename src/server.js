@@ -24,4 +24,5 @@ app.use((error, req, res, next) => {
 })
 
 dotenv.config()
-app.listen(process.env.PORT || 3000, () => console.log('server is running'))
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => console.log('server is runningin port '+ PORT))
